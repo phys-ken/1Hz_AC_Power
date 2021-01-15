@@ -4,11 +4,14 @@
 #define PIN_IN1 4
 #define PIN_IN2 5
 #define PIN_VREF 3 // PWM
+const int INPUT_PIN = A0;
+int VOLUME;
 
 int val = 0;
 int old_val = 0;
 int state = 0;
-float fq = 2;
+float fq = 1;
+float volvol;
 
 void setup()
 {
@@ -19,6 +22,14 @@ void setup()
 
 void loop()
 {
+
+  VOLUME = analogRead(INPUT_PIN);  // アナログ値の読み取り
+  Serial.print("Volume: ");        // シリアルモニタに出力
+  Serial.println(VOLUME);
+
+  fq = map(VOLUME,0,1023,1,10);
+   Serial.println(fq);
+  
   //前進
   Serial.println("forward!");
   digitalWrite(PIN_IN1, HIGH);
