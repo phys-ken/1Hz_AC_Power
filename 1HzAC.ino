@@ -1,5 +1,5 @@
 //モータードライバーとして、DRV8835を使用
-//　1/13メモ　可変抵抗をanalogreadで読んで、fqを1～10の間で変化させる。
+//TODO:OLEDに表示する
 
 #define PIN_IN1 4
 #define PIN_IN2 5
