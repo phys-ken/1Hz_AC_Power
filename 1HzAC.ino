@@ -23,13 +23,13 @@ void setup()
 void loop()
 {
 
-  VOLUME = analogRead(INPUT_PIN);  // アナログ値の読み取り
-  Serial.print("Volume: ");        // シリアルモニタに出力
+  VOLUME = analogRead(INPUT_PIN); // アナログ値の読み取り
+  Serial.print("Volume: ");       // シリアルモニタに出力
   Serial.println(VOLUME);
 
-  fq = map(VOLUME,0,1023,1,10);
-   Serial.println(fq);
-  
+  fq = map(VOLUME, 0, 1023, 1, 10); //VOLUMEに合わせて振動数を1～10に変更
+  Serial.println(fq);
+
   //前進
   Serial.println("forward!");
   digitalWrite(PIN_IN1, HIGH);
