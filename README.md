@@ -4,3 +4,6 @@
 . 参考にしたサイト
   - [ArduinoでVVVFインバータ作ってみた](https://qiita.com/tueks3/items/b0e06d58cec6778cc54d)  
   上記サイトでは30Hzが限界と書いてありましたが、私の環境では疑似正弦波の分割数を10個まで落としても3Hzまでしか出せませんでした。超格安のArduino nano互換機を使っているのが原因か？
+
+* 2021/3/22 ESP32で作成しました。
+  * analogWriteは、ledcwriteになる。少し処理がややこしい。
